@@ -14,6 +14,10 @@
 			// alert(0);
 			if (navigator.connection) {
 	    		alert(navigator.connection.type)
+	    		if(navigator.connection.downlinkMax) {
+				    downMax = navigator.connection.downlinkMax;
+				    alert(downMax);
+			  	}
 	    	}
 		})
 	</script>
