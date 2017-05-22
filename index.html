@@ -4,9 +4,9 @@
 	<meta charset="UTF-8">
 	<title>h5网络测试</title>
 	<style>
-		body{background: lightyellow;}
+		body{background: lightpurple;}
 	</style>
-	<script src="docs/js/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<!-- <script src="docs/js/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8"></script> -->
 </head>
 <body>
 	<script>
@@ -15,7 +15,7 @@
 			if (navigator.connection) {
 	    		alert(navigator.connection.type)
 	    	}
-	    	navigator.connection.addEventListener('change',function (event) {
+	    	navigator.connection.addEventListener('ochange',function (event) {
 	    		alert(0)
 		    	alert(connection.type);
 		  	});
