@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<title>h5网络测试</title>
 	<style>
-		body{background: lightpurple;}
+		body{background: yellow;}
 	</style>
 	<!-- <script src="docs/js/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8"></script> -->
 </head>
@@ -13,8 +13,9 @@
 		window.onload = function(){
 			if (navigator.connection) {
 	    		alert(navigator.connection.type)
+	    		alert(navigator.connection.downlinkMax);
 	    	}
-	    	navigator.connection.addEventListener('ochange',function (event) {
+	    	navigator.connection.addEventListener('change',function (event) {
 	    		alert(0)
 		    	alert(connection.type);
 		  	});
