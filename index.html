@@ -10,8 +10,7 @@
 </head>
 <body>
 	<script>
-		$(function(){
-			alert(0);
+		window.onload = function(){
 			if (navigator.connection) {
 	    		alert(navigator.connection.type)
 	    	}
@@ -19,7 +18,7 @@
 	    		alert(0)
 		    	alert(connection.type);
 		  	});
-		})
+		}
 	</script>
 </body>
 </html>
