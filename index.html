@@ -4,16 +4,16 @@
 	<meta charset="UTF-8">
 	<title>h5网络测试</title>
 	<style>
-		body{background: lightgreen;}
+		body{background: lightblue;}
 	</style>
 	<!-- <script src="docs/js/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8"></script> -->
 </head>
 <body>
 	<script>
 		window.onload = function(){
+			alert('haha');
 		  	var connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
 			var type = connection.type;
-			alert('哈哈');
 			function updateConnectionStatus() {
 		  		if (connection.type === "wifi")
 			  	{
