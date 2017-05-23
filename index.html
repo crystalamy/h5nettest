@@ -11,25 +11,25 @@
 <body>
 	<script>
 		window.onload = function(){
-			alert('haha');
-		  	var connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
-			var type = connection.type;
-			alert(navigator.userAgent);
-			function updateConnectionStatus() {
-		  		if (connection.type === "wifi")
-			  	{
-			  		alert('当前是wifi网络，请放心观看')
-			  	}
-				else if (connection.type === "cellular")
-			  	{
-				  	alert('当前使用流量观看');
-			  	}
-				else
-			  	{
-				  	alert('呀吼~没网了哦~');
-			  	}
+			// alert('haha');
+		  	// var connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+			// var type = connection.type;
+			// alert(navigator.userAgent);
+			// function updateConnectionStatus() {
+		 //  		if (connection.type === "wifi")
+			//   	{
+			//   		alert('当前是wifi网络，请放心观看')
+			//   	}
+			// 	else if (connection.type === "cellular")
+			//   	{
+			// 	  	alert('当前使用流量观看');
+			//   	}
+			// 	else
+			//   	{
+			// 	  	alert('呀吼~没网了哦~');
+			//   	}
 
-			}
+			// }
 			//判断当前浏览类型  
 		  	function BrowserType()  
 			  	{  
@@ -67,7 +67,7 @@
 			       	if (isEdge) { return "Edge";}  
 			   	}//myBrowser() end   
 		 		alert("您的浏览器类型为:"+BrowserType());  
-			connection.addEventListener('typechange', updateConnectionStatus);
+			// connection.addEventListener('typechange', updateConnectionStatus);
 		}
 	</script>
 </body>
