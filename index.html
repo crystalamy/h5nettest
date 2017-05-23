@@ -14,6 +14,7 @@
 			alert('haha');
 		  	var connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
 			var type = connection.type;
+			alert(navigator.userAgent);
 			function updateConnectionStatus() {
 		  		if (connection.type === "wifi")
 			  	{
