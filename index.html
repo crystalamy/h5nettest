@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<title>h5网络测试</title>
 	<style>
-		body{background: pink;}
+		body{background: lightgreen;}
 	</style>
 	<!-- <script src="docs/js/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8"></script> -->
 </head>
@@ -26,28 +26,31 @@
 					var u = navigator.userAgent;
 					num = u.substr(u.indexOf('Android') + 8, 3);
 					if (num > 5.0) {
-						alert(1);
-						connection.addEventListener('typechange', updateConnectionStatus);
+						return 1;
 					}
 				}
 			}
-			function updateConnectionStatus() {
-			  	var connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
-				var type = connection.type;
-		  		if (connection.type === "wifi")
-			  	{
-			  		alert('当前是wifi网络，请放心观看')
-			  	}
-				else if (connection.type === "cellular")
-			  	{
-				  	alert('当前使用流量观看');
-			  	}
-				else
-			  	{
-				  	alert('呀吼~没网了哦~');
-			  	}
+			function updateConnectionStatus(flag) {
+				if(flag === 1){
+				  	var connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+					var type = connection.type;
+			  		if (connection.type === "wifi")
+				  	{
+				  		alert('当前是wifi网络，请放心观看')
+				  	}
+					else if (connection.type === "cellular")
+				  	{
+					  	alert('当前使用流量观看');
+				  	}
+					else
+				  	{
+					  	alert('呀吼~没网了哦~');
+				  	}
+				}
 		  	}
-			appVersion(getappCode);
+		  	var canuseapp = appVersion(getappCode);
+		  	alert(canuseapp);
+			connection.addEventListener('typechange', updateConnectionStatus(canuseapp));
 		}
 	</script>
 </body>
