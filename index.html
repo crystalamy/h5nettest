@@ -4,36 +4,18 @@
 	<meta charset="UTF-8">
 	<title>h5网络测试</title>
 	<style>
-		body{background: lightgreen;}
+		body{background: lightblue;}
 	</style>
-	<!-- <script src="docs/js/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8"></script> -->
 </head>
 <body>
 	<script>
 		window.onload = function(){
-		  	var connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+			var connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
 			var type = connection.type;
-			function appType(){
-				if (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) {  //判断是否为苹果系统
-				    return 1;
-				} else if (/(Android)/i.test(navigator.userAgent)) {		//判断是否为安卓系统
-				    return 2;
-				} else {													//pc或其他系统
-					return 3;
-				};
-			}
-			var getappCode = appType();
-			function appVersion(type){
-				if(type === 2){
-					var u = navigator.userAgent;
-					num = u.substr(u.indexOf('Android') + 8, 3);
-					if (num > 5.0) {
-						return 1;
-					}
-				}
-			}
-			function updateConnectionStatus(flag) {
-				if(flag === 1){
+			function updateConnectionStatus() {
+				var useragent = navigator.userAgent;
+				appversion = useragent.substr(useragent.indexOf('Android') + 8, 3);
+				if (appversion > 5.0) {
 					console.log(type);
 			  		if (connection.type === "wifi")
 				  	{
@@ -49,9 +31,7 @@
 				  	}
 				}
 		  	}
-		  	var canuseapp = appVersion(getappCode);
-		  	// alert(canuseapp);
-			connection.addEventListener('typechange', updateConnectionStatus(canuseapp));
+			connection.addEventListener('typechange', updateConnectionStatus);
 		}
 	</script>
 </body>
