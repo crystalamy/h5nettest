@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<title>h5网络测试</title>
 	<style>
-		body{background: yellow;}
+		body{background: pink;}
 	</style>
 	<!-- <script src="docs/js/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8"></script> -->
 </head>
@@ -26,6 +26,7 @@
 					var u = navigator.userAgent;
 					num = u.substr(u.indexOf('Android') + 8, 3);
 					if (num > 5.0) {
+						alert(1);
 						connection.addEventListener('typechange', updateConnectionStatus);
 					}
 				}
